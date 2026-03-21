@@ -55,40 +55,6 @@ RolePrivilegeAnalyzer/
 
 ---
 
-## 📦 NuGet Dependencies
-
-Install via NuGet Package Manager:
-
-```
-Install-Package Microsoft.CrmSdk.CoreAssemblies
-Install-Package XrmToolBoxPackage
-Install-Package ClosedXML
-```
-
----
-
-## 🚀 Build & Deploy
-
-1. Open in Visual Studio 2022
-2. Restore NuGet packages
-3. Build in Release mode
-4. Copy `RolePrivilegeAnalyzer.dll` to your XrmToolBox `Plugins` folder
-5. Launch XrmToolBox → find "Role Privilege Analyzer"
-
----
-
-## 🔧 Configuration
-
-| Setting | Default | Description |
-|---------|---------|-------------|
-| Over Privileged Threshold | 5 roles | Users with more roles than this are flagged |
-| High Risk Roles | System Administrator, System Customizer, Support User | Roles that trigger High Risk status |
-
-To customize, modify `RiskAnalysisService.cs`:
-- `OverPrivilegedRoleThreshold` property
-- `HighRiskRoles` hash set
-
----
 
 ## 🎨 Risk Status Logic
 
@@ -125,6 +91,13 @@ All queries use `PagingInfo` with `Count = 5000` to handle large environments.
 
 ---
 
-## License
+## 📄 License (MIT)
+MIT License
 
-MIT
+Copyright (c) 2026 Moamen Ashraf
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction...
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
