@@ -11,7 +11,7 @@ Enterprise-grade security audit tool for Microsoft Dynamics 365 / Dataverse. Ana
 ## 📸 Preview
 
 <p align="center">
-  <img src="image<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/53e9b050-beee-4c36-8033-5ea68c0f30dd" />
+  <img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/53e9b050-beee-4c36-8033-5ea68c0f30dd" />
 </p>
 
 ---
