@@ -8,9 +8,18 @@ Enterprise-grade security audit tool for Microsoft Dynamics 365 / Dataverse. Ana
 
 ---
 
+## 📸 Preview
+
+<p align="center">
+  <img src="image<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/53e9b050-beee-4c36-8033-5ea68c0f30dd" />
+</p>
+
+---
+
 ## ✨ Features
 
 ### Core
+
 - **User-Role Grid** — Virtual-mode DataGridView handling 20,000+ users without freezing
 - **Privilege Risk Heatmap** — Color-coded access levels (🟢 Basic → 🔴 Global)
 - **Security Risk Detection** — Automatic flagging: High Risk, Over Privileged, No Roles, Normal
@@ -18,6 +27,7 @@ Enterprise-grade security audit tool for Microsoft Dynamics 365 / Dataverse. Ana
 - **Column Sorting** — Click any header to sort ascending/descending
 
 ### Advanced
+
 - **Privilege Drill-down** — Select any user to see Role → Privilege → Access Level breakdown
 - **Role Comparison** — Compare two users: common roles, unique roles, and privilege-level differences
 - **Analytics Dashboard** — Summary stats + bar chart of most-assigned roles
@@ -25,11 +35,65 @@ Enterprise-grade security audit tool for Microsoft Dynamics 365 / Dataverse. Ana
 - **Open in CRM** — Double-click a user name to open their record in Dynamics 365
 
 ### Performance
+
 - `VirtualMode = true` with `CellValueNeeded` — renders only visible rows
 - All data loaded in **6 bulk queries** (no N+1)
 - In-memory caching with `Dictionary<Guid, ...>` lookups
 - Async/await throughout — UI never blocks
 - Progress bar with step-by-step feedback
+
+---
+
+## 🚀 How to Use
+
+### 1. Open the Tool
+
+Launch **XrmToolBox**, connect to your Dynamics 365 / Dataverse environment, and open **Role Privilege Analyzer** from the tool list.
+
+### 2. Load Data
+
+Click the **Load Data** button to retrieve all users, roles, privileges, and assignments from the connected environment. A progress bar will indicate each stage of the loading process. All data is fetched in six optimized bulk queries and cached in memory for fast interaction.
+
+### 3. Explore the User-Role Grid
+
+Once loaded, the main grid displays all active users with their assigned roles, business unit, and domain. Use the **real-time search bar** to filter by user name, domain, business unit, or role name. Click any **column header** to sort the grid ascending or descending.
+
+### 4. Analyze Risk Levels
+
+Each user is automatically assigned a risk status based on their role assignments:
+
+- 🔴 **High Risk** — User holds a sensitive role (e.g., System Administrator)
+- ⚠️ **Over Privileged** — User has more than 5 roles or any Global-level privilege
+- ✅ **Normal** — Roles are within safe thresholds
+- ❌ **No Roles** — User has no role assignments
+
+Use these indicators to quickly identify accounts that require a security review.
+
+### 5. View Privilege Drill-Down
+
+Select any user in the grid to view a detailed breakdown of their privileges. The drill-down panel shows each assigned **Role**, the **Privileges** it grants, and the corresponding **Access Level** (Basic, Local, Deep, or Global) — color-coded as a heatmap for quick assessment.
+
+### 6. Compare Users
+
+Select two users to generate a side-by-side comparison. The comparison view highlights:
+
+- **Common roles** shared between both users
+- **Unique roles** assigned to only one user
+- **Privilege-level differences** where the same privilege exists at different access depths
+
+This is useful for auditing role consistency across similar positions.
+
+### 7. View Analytics Dashboard
+
+Open the **Analytics Dashboard** to see summary statistics for the environment, including total users, role distribution, risk breakdowns, and a bar chart of the most frequently assigned roles.
+
+### 8. Export to Excel
+
+Click **Export to Excel** to generate a comprehensive `.xlsx` report using ClosedXML. The exported workbook includes the full user-role grid with conditional formatting and a dedicated analytics sheet summarizing key metrics.
+
+### 9. Open User in CRM
+
+Double-click any user name in the grid to open their system user record directly in Dynamics 365, allowing you to review or modify their security configuration in the native interface.
 
 ---
 
@@ -54,7 +118,6 @@ RolePrivilegeAnalyzer/
 ```
 
 ---
-
 
 ## 🎨 Risk Status Logic
 
@@ -92,6 +155,7 @@ All queries use `PagingInfo` with `Count = 5000` to handle large environments.
 ---
 
 ## 📄 License (MIT)
+
 MIT License
 
 Copyright (c) 2026 Moamen Ashraf
