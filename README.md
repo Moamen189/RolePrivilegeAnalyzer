@@ -1,6 +1,6 @@
 # 🛡️ Role Privilege Analyzer — XrmToolBox Plugin
 
-**Version:** 1.2026.4.1  
+**Version:** 1.2026.4.2  
 **Framework:** .NET Framework 4.8  
 **Platform:** XrmToolBox
 
